@@ -1,0 +1,21 @@
+<%- include("header.ejs") %>
+<h1> Blog Post</h1>
+
+
+
+<% blogs.forEach(function(blogs){ %>
+	
+	<h2> <%= blogs.title %> </h2>
+	<img src = "<%= blogs.url %>" />
+	<p><%= blogs.date %> </p>
+	<p><%= blogs.body.substring(0,100) %>.... </p>
+	<a class="ui blue button" href="/blogs/<%= blogs._id %> ">Read More</a>
+	<a class="ui blue button" href="/blogs/<%= blogs._id %>/edit ">Edit blog</a>
+	
+	
+	
+	
+	
+<% }); %>
+
+<%- include("footer.ejs") %>
